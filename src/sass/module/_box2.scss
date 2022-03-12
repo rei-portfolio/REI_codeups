@@ -1,0 +1,129 @@
+@use "global" as *;
+
+.box2__bgc {
+  position: relative;
+}
+
+.box2__bgc::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  height: 100%;
+  background-color: $black;
+  width: 100%;
+  @include mq(md) {
+    right: initial;
+    width: calc(50% + #{rem(256)});
+  }
+}
+
+.box2__wrapper {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  @include mq("md") {
+    max-width: 1280px + strip-unit($padding-pc);
+    padding-right: $padding-pc;
+  }
+}
+
+.box2__inner.inner {
+  max-width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  @include mq(md) {
+    max-width: rem(1190);
+    margin-left: 0;
+  }
+}
+
+.box2__contents {
+  margin-top: rem(54);
+  @include mq(md) {
+    margin-top: rem(41);
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding: rem(80) 0 rem(80) rem(91);
+    position: relative;
+  }
+}
+
+.box2__img {
+  width: 100%;
+  position: relative;
+  @include mq(md) {
+    margin-left: rem(32);
+  }
+}
+
+.box2__img::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: $img-background;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+}
+
+.box2__img::before {
+  content: "";
+  display: block;
+  padding-top: 69.6%;
+  @include mq(md) {
+    padding-top: 69.83842%;
+  }
+}
+
+.box2__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.box2__content {
+  padding: rem(29) $padding-sp rem(20);
+  width: 100%;
+  max-width: rem(540);
+  margin-right: auto;
+  margin-left: auto;
+  @include mq(md) {
+    max-width: rem(510);
+    padding: 0;
+  }
+}
+
+.box2__text {
+  margin-top: rem(28);
+  letter-spacing: 0.125em;
+  line-height: 1.45;
+  @include mq(md) {
+    margin-top: rem(43);
+    line-height: 2.1875;
+    letter-spacing: 0.03125em;
+  }
+}
+
+.box2__btn {
+  text-align: center;
+  margin-top: rem(26);
+  @include mq(md) {
+    text-align: left;
+    margin-top: rem(48);
+    font-weight: $medium;
+  }
+}
+
+

@@ -1,0 +1,53 @@
+@use "global" as *;
+
+.header {
+  background-color: $header-opacity;
+  transition: all 0.3s ease-in-out;
+}
+
+.header__inner {
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 rem(22);
+  @include mq(md) {
+    padding-right: 0;
+    padding-left: rem(32);
+  }
+}
+
+.header__logo {
+  width: rem(74);
+  height: rem(25);
+  position: relative;
+  z-index: 9999;
+  @include mq(md) {
+    width: rem(94);
+    height: rem(30);
+  }
+}
+
+.header__hamburger {
+  position: absolute;
+  top: rem(17);
+  right: rem(17);
+  z-index: 5;
+  width: rem(36);
+  height: rem(16);
+}
+
+.header__sp-nav {
+  position: fixed;
+  z-index: 4;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+}
+
+.header.headerColorScroll {
+  background-color: $background-color;
+  transition: all 0.3s ease-in-out;
+}

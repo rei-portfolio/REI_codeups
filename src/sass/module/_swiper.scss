@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.swiper-wrapper,
+.swiper-slide,
+.swiper-slide__img,
+.swiper-slide__img img {
+  height: inherit;
+}
+
+.swiper-pagination-bullet {
+  background: #c4c4c4;
+  opacity: 1;
+  width: rem(8);
+  height: rem(8);
+}
+
+.swiper-pagination-bullet-active {
+  background: $ac-color;
+  opacity: 1;
+  width: rem(8);
+  height: rem(8);
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: rem(-18);
+  @include mq(md) {
+    bottom: rem(-32);
+    left: rem(-19);
+  }
+}

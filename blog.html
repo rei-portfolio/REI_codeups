@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- index -->
+    <meta name="robots" content="noindex" />
+    <!-- meta情報 -->
+    <title>CodeUps</title>
+    <meta name="description" content="お客様の夢を叶えるWebサイトを制作" />
+    <meta name="keywords" content="コードアップス" />
+    <!-- ogp -->
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.reirei-blog.site/REI_codeups/" />
+    <meta property="og:title" content="CodeUps" />
+    <meta property="og:description" content="お客様の夢を叶えるWebサイトを制作" />
+    <meta
+      property="og:image"
+      content="https://www.reirei-blog.site/REI_codeups/images/common/mv01.jpg"
+    />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.reirei-blog.site/REI_codeups/" />
+    <meta property="twitter:title" content="CodeUps" />
+    <meta property="twitter:description" content="お客様の夢を叶えるWebサイトを制作" />
+    <meta
+      property="twitter:image"
+      content="https://www.reirei-blog.site/REI_codeups/images/common/mv01.jpg"
+    />
+    <!-- ファビコン -->
+    <link rel="icon" href="./images/common/favicon.ico" />
+    <!-- googlefont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header l-header js-header">
+      <div class="header__inner">
+        <div class="header__logo logo">
+          <a href="https://www.reirei-blog.site/REI_codeups/" class="logo__link">
+            <img src="./images/common/CodeUps.svg" alt="コードアップス" />
+          </a>
+        </div>
+
+        <button
+          type="button"
+          id="js-hamburger"
+          class="hamburger header__hamburger"
+          aria-controls="js-sp-nav"
+          aria-expanded="false"
+          aria-label="メニューを開閉する"
+        >
+          <span class="hamburger__line"></span>
+        </button>
+
+        <!-- sp-nav -->
+        <div class="sp-nav header__sp-nav" id="js-sp-nav" aria-hidden="true">
+          <nav>
+            <ul class="sp-nav__items">
+              <li class="sp-nav__item">
+                <a href="https://www.reirei-blog.site/REI_codeups/">トップ</a>
+              </li>
+              <li class="sp-nav__item"><a href="#">お知らせ</a></li>
+              <li class="sp-nav__item"><a href="#">事業内容</a></li>
+              <li class="sp-nav__item"><a href="#">制作実績</a></li>
+              <li class="sp-nav__item"><a href="#">企業概要</a></li>
+              <li class="sp-nav__item"><a href="blog.html">ブログ</a></li>
+              <li class="sp-nav__item"><a href="#">お問い合わせ</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!-- //.sp-nav -->
+
+        <!-- pc-nav -->
+        <nav class="header__pc-nav pc-nav">
+          <ul class="pc-nav__items">
+            <li class="pc-nav__item"><a href="#">お知らせ</a></li>
+            <li class="pc-nav__item"><a href="#">事業内容</a></li>
+            <li class="pc-nav__item"><a href="#">制作実績</a></li>
+            <li class="pc-nav__item"><a href="#">企業概要</a></li>
+            <li class="pc-nav__item"><a href="blog.html">ブログ</a></li>
+            <li class="pc-nav__item pc-nav__item--white"><a href="#">お問い合わせ</a></li>
+          </ul>
+        </nav>
+        <!-- //.pc-nav -->
+      </div>
+    </header>
+    <!-- //.header -->
+
+    <!-- main -->
+    <main>
+      <!-- sub-main-view -->
+      <div class="sub-main-view js-main-view">
+        <picture class="sub-main-view__img">
+          <source srcset="./images/blog/blog-pc-mv.jpg" media="(min-width: 768px)" />
+          <img src="./images/blog/blog-sp-mv.jpg" alt="ブログ" />
+        </picture>
+        <h1 class="sub-main-view__title">ブログ</h1>
+      </div>
+      <!-- //.sub-main-view -->
+
+      <!-- pagination -->
+      <ul class="pagination l-pagination inner">
+        <li class="pagination__list">
+          <a href="https://www.reirei-blog.site/REI_codeups/">トップ</a>
+        </li>
+        <li class="pagination__list">
+          <span class="pagination__current">ブログ記事一覧</span>
+        </li>
+      </ul>
+      <!-- /.pagination -->
+
+      <!-- category-list -->
+      <ul class="category-list l-category-list inner">
+        <li class="category-list__item">
+          <span class="category-list__current">all</span>
+        </li>
+        <li class="category-list__item">
+          <a href="#">会社広報</a>
+        </li>
+        <li class="category-list__item">
+          <a href="#">会社説明</a>
+        </li>
+        <li class="category-list__item">
+          <a href="#">採用情報</a>
+        </li>
+      </ul>
+      <!-- /.category-list -->
+
+      <!-- blog -->
+      <section class="sub-blog section-sub-blog">
+        <div class="sub-blog__inner inner">
+          <div class="sub-blog__items card-list">
+            <a href="#" class="card-list__item blog-card blog-card--new">
+              <figure class="blog-card__img">
+                <img
+                  src="./images/common/card01.jpg"
+                  alt="サイトをリニューアルオープンしました"
+                />
+              </figure>
+              <div class="blog-card__body">
+                <h2 class="blog-card__title">サイトをリニューアルオープンしました。</h2>
+                <p class="blog-card__text">
+                  この度、大幅なサイトリニューアルを決定致しました。
+                </p>
+                <div class="blog-card__info">
+                  <span class="blog-card__category">会社広報</span>
+                  <time class="blog-card__date" datetime="2021-07-20">2021.07.20</time>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="card-list__item blog-card">
+              <figure class="blog-card__img">
+                <img
+                  src="./images/common/card02.jpg"
+                  alt="会社説明会in大阪の模様をお伝えします"
+                />
+              </figure>
+              <div class="blog-card__body">
+                <h2 class="blog-card__title">会社説明会in大阪の模様をお伝えします。</h2>
+                <p class="blog-card__text">
+                  会社説明会について大阪で開催することが決定致しました。
+                </p>
+                <div class="blog-card__info">
+                  <span class="blog-card__category">会社説明</span>
+                  <time class="blog-card__date" datetime="2021-07-20">2021.07.20</time>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="card-list__item blog-card">
+              <figure class="blog-card__img">
+                <img
+                  src="./images/common/card03.jpg"
+                  alt="デザイナー1名の募集を開始しました"
+                />
+              </figure>
+              <div class="blog-card__body">
+                <h2 class="blog-card__title">デザイナー1名の募集を開始しました。</h2>
+                <p class="blog-card__text">
+                  弊社ではユーモアなデザイナーの方を募集しております。
+                </p>
+                <div class="blog-card__info">
+                  <span class="blog-card__category">採用情報</span>
+                  <time class="blog-card__date" datetime="2021-07-20">2021.07.20</time>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="card-list__item blog-card">
+              <figure class="blog-card__img">
+                <img
+                  src="./images/blog/card04.jpg"
+                  alt="タイトルが入ります。タイトルが入ります。"
+                />
+              </figure>
+              <div class="blog-card__body">
+                <h2 class="blog-card__title">タイトルが入ります。タイトルが入ります。</h2>
+                <p class="blog-card__text">
+                  説明文が入ります。説明文が入ります。説明文が入ります。
+                </p>
+                <div class="blog-card__info">
+                  <span class="blog-card__category">カテゴリ</span>
+                  <time class="blog-card__date" datetime="2021-07-20">2021.07.20</time>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="card-list__item blog-card">
+              <figure class="blog-card__img">
+                <img
+                  src="./images/blog/card05.jpg"
+                  alt="タイトルが入ります。タイトルが入ります。"
+                />
+              </figure>
+              <div class="blog-card__body">
+                <h2 class="blog-card__title">タイトルが入ります。タイトルが入ります。</h2>
+                <p class="blog-card__text">
+                  説明文が入ります。説明文が入ります。説明文が入ります。
+                </p>
+                <div class="blog-card__info">
+                  <span class="blog-card__category">カテゴリ</span>
+                  <time class="blog-card__date" datetime="2021-07-20">2021.07.20</time>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="card-list__item blog-card">
+              <figure class="blog-card__img">
+                <img
+                  src="./images/blog/card06.jpg"
+                  alt="タイトルが入ります。タイトルが入ります。"
+                />
+              </figure>
+              <div class="blog-card__body">
+                <h2 class="blog-card__title">タイトルが入ります。タイトルが入ります。</h2>
+                <p class="blog-card__text">
+                  説明文が入ります。説明文が入ります。説明文が入ります。
+                </p>
+                <div class="blog-card__info">
+                  <span class="blog-card__category">カテゴリ</span>
+                  <time class="blog-card__date" datetime="2021-07-20">2021.07.20</time>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="card-list__item blog-card">
+              <figure class="blog-card__img">
+                <img
+                  src="./images/blog/card07.jpg"
+                  alt="タイトルが入ります。タイトルが入ります。"
+                />
+              </figure>
+              <div class="blog-card__body">
+                <h2 class="blog-card__title">タイトルが入ります。タイトルが入ります。</h2>
+                <p class="blog-card__text">
+                  説明文が入ります。説明文が入ります。説明文が入ります。
+                </p>
+                <div class="blog-card__info">
+                  <span class="blog-card__category">カテゴリ</span>
+                  <time class="blog-card__date" datetime="2021-07-20">2021.07.20</time>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="card-list__item blog-card">
+              <figure class="blog-card__img">
+                <img
+                  src="./images/blog/card08.jpg"
+                  alt="タイトルが入ります。タイトルが入ります。"
+                />
+              </figure>
+              <div class="blog-card__body">
+                <h2 class="blog-card__title">タイトルが入ります。タイトルが入ります。</h2>
+                <p class="blog-card__text">
+                  説明文が入ります。説明文が入ります。説明文が入ります。
+                </p>
+                <div class="blog-card__info">
+                  <span class="blog-card__category">カテゴリ</span>
+                  <time class="blog-card__date" datetime="2021-07-20">2021.07.20</time>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="card-list__item blog-card">
+              <figure class="blog-card__img">
+                <img
+                  src="./images/blog/card09.jpg"
+                  alt="タイトルが入ります。タイトルが入ります。"
+                />
+              </figure>
+              <div class="blog-card__body">
+                <h2 class="blog-card__title">タイトルが入ります。タイトルが入ります。</h2>
+                <p class="blog-card__text">
+                  説明文が入ります。説明文が入ります。説明文が入ります。
+                </p>
+                <div class="blog-card__info">
+                  <span class="blog-card__category">カテゴリ</span>
+                  <time class="blog-card__date" datetime="2021-07-20">2021.07.20</time>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- //.sub-blog -->
+
+      <!--pagevavi-->
+      <div class="wp-pagenavi l-wp-pagenavi">
+        <a class="first" href="#">PREV</a>
+        <span class="current">1</span>
+        <a class="page smaller" href="#">2</a>
+        <a class="page smaller" href="#">3</a>
+        <a class="page larger" href="#">4</a>
+        <a class="last" href="#">NEXT</a>
+      </div>
+      <!--/pagevavi-->
+
+      <!-- contact -->
+      <section class="contact section-contact">
+        <div class="contact__inner inner">
+          <div class="content__title section-header">
+            <h2 class="section-header__title section-header__title--sub">お問い合わせ</h2>
+            <span class="section-header__subtitle section-header__subtitle--contact">contact</span>
+          </div>
+          <p class="contact__text">
+            Webサイトの制作のご依頼やお見積りなど、お気軽にご相談ください。
+          </p>
+          <div class="contact__btn">
+            <a href="#" class="btn btn--large">お問い合わせへ</a>
+          </div>
+        </div>
+      </section>
+      <!-- /.contact -->
+
+      <!-- js-pagetop -->
+      <div id="js-pagetop" class="pagetop"></div>
+    </main>
+    <!-- ../main -->
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__logo logo">
+          <a href="https://www.reirei-blog.site/REI_codeups/" class="logo__link">
+            <img src="./images/common/CodeUps.svg" alt="コードアップス" />
+          </a>
+        </div>
+        <ul class="footer__items">
+          <li class="footer__item">
+            <a href="https://www.reirei-blog.site/REI_codeups/">トップ</a>
+          </li>
+          <li class="footer__item"><a href="#">お知らせ</a></li>
+          <li class="footer__item"><a href="#">事業内容</a></li>
+          <li class="footer__item"><a href="#">企業概要</a></li>
+          <li class="footer__item"><a href="blog.html">ブログ</a></li>
+          <li class="footer__item"><a href="#">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div class="footer__copy">&copy; 2021 CodeUps Inc.</div>
+    </footer>
+    <!-- /.footer -->
+
+    <!-- JavaScript -->
+    <!-- safariでうまくスムーススクロールされないため -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=smoothscroll"></script>
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script defer src="./js/script.js"></script>
+  </body>
+</html>

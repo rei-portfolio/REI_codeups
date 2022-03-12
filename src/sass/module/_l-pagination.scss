@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.l-pagination {
+  margin-top: rem(14);
+}
+
+.l-pagination.inner {
+  max-width: 100%;
+  @include mq(md) {
+    max-width: $inner + strip-unit($padding-pc) * 2;
+  }
+}

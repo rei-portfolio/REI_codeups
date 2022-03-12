@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.content__items {
+  margin-top: rem(51);
+  display: flex;
+  flex-wrap: wrap;
+  @include mq(md) { 
+    flex-wrap: nowrap;
+  }
+}
+
+.content__item {
+  width: 50%;
+  @include mq(md) { 
+    width: 25%;
+  }
+}

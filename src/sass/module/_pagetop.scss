@@ -1,0 +1,51 @@
+@use "global" as *;
+
+.pagetop {
+  visibility: hidden;
+  opacity: 0;
+  color: $white;
+  cursor: pointer;
+  background-color: $white;
+  padding: rem(22.5);
+  transition: all 0.3s ease-in-out;
+  position: fixed;
+  z-index: 100;
+  right: rem(21);
+  bottom: rem(41);
+  @include mq(md) {
+    right: rem(31);
+    bottom: rem(33);
+  }
+}
+
+.pagetop:hover {
+  @include mq(md) {
+    color: $white;
+    background-color: $black;
+  }
+}
+
+.pagetop::before {
+  content: "";
+  width: rem(20);
+  height: rem(20);
+  border-top: solid 2px $black;
+  border-right: solid 2px $black;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: rem(13);
+  top: rem(19);
+  transition: inherit;
+}
+
+.pagetop:hover:before {
+  @include mq(md) {
+    border-top: solid 2px $white;
+    border-right: solid 2px $white;
+  }
+}
+
+.pagetop.is-fadein {
+  visibility: visible;
+  opacity: 1;
+}

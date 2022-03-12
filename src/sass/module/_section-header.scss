@@ -1,0 +1,83 @@
+@use "global" as *;
+.section-header {
+  position: relative;
+}
+
+.section-header__title {
+  text-align: center;
+  font-size: rem(20);
+  letter-spacing: 0.1em;
+  line-height: 1;
+  @include mq(md) {
+    font-size: rem(30);
+    letter-spacing: 0.06666667em;
+  }
+}
+
+.section-header__subtitle {
+  display: block;
+  font-family: $second-font-family;
+  text-transform: capitalize;
+  color: $ac-color;
+  opacity: $en-title-opacity;
+  font-size: rem(50);
+  line-height: 1;
+  letter-spacing: 0.04em;
+  position: absolute;
+  bottom: rem(13);
+  left: 0;
+  right: 0;
+  text-align: center;
+  @include mq(md) {
+    font-size: rem(110);
+    letter-spacing: 0.01818182em;
+  }
+}
+
+.section-header__subtitle--content {
+  @include mq(md) {
+    bottom: rem(-57);
+    text-align: left;
+  }
+}
+.section-header__subtitle--box1 {
+  @include mq(md) {
+    text-align: right;
+    bottom: rem(-49);
+    max-width: rem(1150);
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $padding-pc;
+  }
+}
+.section-header__subtitle--box2 {
+  @include mq(md) {
+    text-align: left;
+    bottom: rem(-49);
+    max-width: rem(1150);
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: $padding-pc;
+  }
+}
+.section-header__subtitle--blog {
+  @include mq(md) {
+    bottom: rem(-40);
+    text-align: right;
+  }
+}
+.section-header__subtitle--contact {
+  @include mq(md) {
+    bottom: rem(-10);
+    text-align: left;
+  }
+}
+
+.section-header__title.section-header__title--sub {
+  font-size: rem(25);
+  letter-spacing: 0.08em;
+  @include mq(md) {
+    font-size: rem(30);
+    letter-spacing: 0.06666667em;
+  }
+}

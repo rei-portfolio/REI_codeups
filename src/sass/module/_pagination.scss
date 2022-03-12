@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.pagination {
+  display: flex;
+  align-items: center;
+  padding-left: $padding-sp;
+  font-family: $third-font-family;
+  @include mq(md) {
+    padding-left: $padding-pc;
+  }
+}
+
+
+.pagination__list {
+  position: relative;
+}
+
+.pagination__list:not(:last-child)::after {
+  content: ">";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: rem(-15);
+  bottom: 0;
+}
+
+.pagination__list:nth-child(n + 2) {
+  margin-left: rem(20);
+}

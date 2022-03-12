@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.bg-stripe2 {
+  position: relative;
+}
+
+.bg-stripe2::after {
+  display: block;
+  position: absolute;
+  right: rem(0);
+  top: rem(-639);
+  bottom: 0;
+  z-index: -2;
+  content: "";
+  width: calc(1448 / 370 * 100vw);
+  height: 0;
+  transform: rotate(-74.9deg);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid #f9f871;
+  transform-origin: right center;
+  @include mq(md) {
+    width: calc(1810 / 1280 * 100vw);
+    transform: rotate(-45deg);
+    top: calc(-274 / 1280 * 100vw);
+    right: 0;
+  }
+}

@@ -1,0 +1,67 @@
+@use "global" as *;
+
+.main-view {
+  height: 100vh;
+  position: relative;
+}
+
+.main-view::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: $img-background;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.main-view__swiper {
+  height: inherit;
+}
+
+@keyframes zoomUp {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
+
+.swiper-slide-active .main-view__img,
+.swiper-slide-duplicate-active .main-view__img,
+.swiper-slide-prev .main-view__img {
+  animation: zoomUp 10s linear 0s 1 normal both;
+}
+
+.main-view__content {
+  font-weight: $bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  line-height: 1;
+  z-index: 2;
+}
+
+.main-view__title {
+  font-size: rem(28);
+  letter-spacing: 0.01785714em;
+  @include mq(md) {
+    font-size: rem(50);
+    letter-spacing: 0.01em;
+  }
+}
+.main-view__sub-title {
+  font-size: rem(20);
+  letter-spacing: 0.025em;
+  margin-top: rem(24);
+  @include mq(md) {
+    font-size: rem(25);
+    letter-spacing: 0.02em;
+  }
+}

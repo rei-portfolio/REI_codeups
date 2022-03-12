@@ -1,0 +1,42 @@
+@use "global" as *;
+
+.slide-imgs {
+  width: 100%;
+  position: relative;
+}
+
+.slide-imgs__img::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: $img-background;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.slide-imgs::before {
+  content: "";
+  display: block;
+  padding-top: 69.6%;
+  @include mq(md) {
+    padding-top: 69.83842%;
+  }
+}
+
+.slide-imgs__swiper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.slide-imgs__slide,
+.slide-imgs__img,
+.slide-imgs__img img {
+  width: inherit;
+  height: inherit;
+}

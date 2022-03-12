@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.l-category-list {
+  margin-top: rem(65);
+  @include mq(md) {
+    margin-top: rem(96);
+  }
+}
+
+.l-category-list.inner {
+  max-width: 100%;
+  padding-right: 0;
+  margin-left: rem(-13);
+  @include mq(md) {
+    max-width: $inner + strip-unit($padding-pc) * 2;
+    padding-right: $padding-pc;
+    margin-left: auto;
+  }
+}

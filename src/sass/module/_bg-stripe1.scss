@@ -1,0 +1,26 @@
+@use "global" as *;
+
+.bg-stripe1 {
+  position: relative;
+}
+
+.bg-stripe1::before {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: rem(-37);
+  bottom: 0;
+  z-index: -1;
+  content: "";
+  width: calc(776 / 375 * 100%);
+  height: 0;
+  transform: rotate(61.09deg);
+  border-top: 1px solid $ac-color;
+  transform-origin: 0% 0%;
+  @include mq(md) {
+    top: calc(-116 / 1280 * 100%);
+    width: calc(1810 / 1280 * 100%);
+    transform: rotate(45deg);
+  }
+}

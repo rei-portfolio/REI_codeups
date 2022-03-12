@@ -1,0 +1,96 @@
+@use "global" as *;
+
+.btn {
+  display: inline-block;
+  width: 100%;
+  color: $white;
+  background-color: $black;
+  font-size: rem(20);
+  letter-spacing: 0.1em;
+  border: 1px solid $white;
+  padding: rem(9) 0;
+  @include mq(md) {
+    width: initial;
+    // アニメーション
+    position: relative;
+    z-index: 100;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+// アニメーション
+.btn::before {
+  @include mq(md) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -100;
+    content: "";
+    background-color: $white;
+    transform: translateX(-100%);
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.btn:hover {
+  @include mq(md) {
+    color: $black;
+  }
+}
+
+.btn:hover::before {
+  @include mq(md) {
+    transform: translateX(0);
+  }
+}
+
+.btn.btn--reverse {
+  @include mq(md) {
+    background-color: $white;
+    color: $black;
+    letter-spacing: normal;
+    padding: rem(3) rem(27);
+    border: none;
+  }
+}
+
+.btn.btn--reverse::before {
+  @include mq(md) {
+    background-color: $black;
+  }
+}
+
+.btn.btn--reverse:hover {
+  @include mq(md) {
+    color: $white;
+  }
+}
+
+.btn.btn--main {
+  @include mq(md) {
+    font-size: rem(16);
+    letter-spacing: 0.125em;
+    padding: rem(17) rem(134);
+  }
+}
+
+.btn.btn--large {
+  @include mq(md) {
+    font-size: rem(20);
+    padding: rem(14) rem(102);
+  }
+}
+
+.btn.btn--small {
+  @include mq(md) {
+    font-size: rem(16);
+    letter-spacing: normal;
+    padding: rem(3) rem(27);
+    background-color: $white;
+    color: $black;
+    border: none;
+  }
+}

@@ -1,0 +1,7 @@
+AuthUserFile /home/c4696710/public_html/reirei-blog.site/REI_codeups/.htpasswd
+AuthName "REI_codeups"
+AuthType Basic
+require valid-user
+<Files ~ "^.(htpasswd|htaccess)$">
+  deny from all
+</Files>
